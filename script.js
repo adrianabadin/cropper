@@ -12,10 +12,18 @@
 const can = document.getElementById("canvascjs");
 const sel = document.getElementById("cropperSelection");
 const but = document.getElementById("btn-crop");
+const salida = document.getElementById("output");
 but.addEventListener("click", () => {
   //const otro = can.cropper.$toCanvas();
-  can
+  sel
     .$toCanvas()
-    .then((e) => console.log(e))
+    .then((e) => {
+      const link = document.createElement("a");
+      link.setAttribute("href", e.toDataURL());
+      link.download = "imagen-recortada.jpg";
+      link.click();
+      console.log(salida, e);
+      salida.setAttribute("href", e.toDataURL());
+    })
     .catch((err) => console.log(err));
 });

@@ -13,7 +13,7 @@
     <link  href="style.css" rel="stylesheet">
 </head>
 <body>
-    <cropper-canvas background id="canvascjs" style="height: 400px; " scale-step="0" id="cropperCanvas">
+    <cropper-canvas background id="canvascjs" style="height: 400px; " scale-step="0" >
         <cropper-image src="family.jpeg" alt="Picture" style="height: 400px;" initial-center-size="contain" rotatable scalable skewable translatable>
 
         </cropper-image>
@@ -47,9 +47,10 @@
         </div> -->
         <button id="btn-crop">Crop</button>
         
-        <!-- <div class="cropped-container">
-            <img src="" id="output">
-        </div> -->
-    <script src="script.js" type="module"></script>
+        <div style="height: 400px;">
+            <a href="#" id="output">Descargar</a>
+        </div>
+    
+        <script src="script.js" type="module"></script>
 </body>
 </html>
